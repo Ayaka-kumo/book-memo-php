@@ -1,3 +1,10 @@
+.delete-page {
+    width: min(560px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 48px 0;
+}
+
+
 * {
     box-sizing: border-box;
 }
@@ -16,12 +23,34 @@ body {
     padding: 40px 0;
 }
 
-.edit-card {
+.delete-card,
+  .edit-card {
+
     padding: 28px;
     border: 1px solid #e5e7eb;
     border-radius: 8px;
     background: #fff;
+
+    color: #222;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.7;
 }
+
+.delete-card h1 {
+    margin: 0 0 18px;
+    font-size: 28px;
+}
+
+.delete-message {
+    margin: 0 0 8px;
+    font-weight: 700;
+}
+
+.delete-note {
+    margin: 0 0 24px;
+    color: #666;
+}
+
 
 .edit-card h1 {
     margin: 0 0 24px;
@@ -56,6 +85,7 @@ body {
     resize: vertical;
 }
 
+.delete-actions,
 .form-actions {
     display: flex;
     justify-content: flex-end;
@@ -72,9 +102,32 @@ body {
     border-radius: 6px;
     background: #fff;
     color: #222;
+    font: inherit;
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
+}
+
+
+.button.danger {
+    border-color: #dc2626;
+    background: #dc2626;
+    color: #fff;
+}
+
+@media (max-width: 640px) {
+    .delete-page {
+        width: min(100% - 24px, 560px);
+        padding: 24px 0;
+    }
+
+    .delete-card {
+        padding: 20px;
+    }
+
+    .delete-actions {
+        display: grid;
+    }
 }
 
 .button.primary {
@@ -162,3 +215,4 @@ body {
         font-size: 20px;
     }
 }
+
